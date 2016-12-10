@@ -18,7 +18,7 @@ This is recommended as it's easy and portable.
       sudo docker pull psugvbigdata/mongo-base
 3.To run the mongodb image, run the following command:
 
-      sudo docker run --name mongo -p 21117:27017 -d psugvbigdata/mongo-base
+      docker run -d -p 21117:27017 psugvbigdata/mongo-base /usr/bin/mongod --replSet "rs0"
 
 This command will name the container as mongo and port the inner port(27017) to outside at 21117. 
 
